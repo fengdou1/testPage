@@ -11,6 +11,13 @@
     <input type="text" id="serch">
     <button>测试按钮</button>
     <script>
+
+        window.addEventListener('message', (e) => {
+            console.log('iframe=' + e.data);
+        }, false);
+
+
+ 
         var buttondom = document.getElementsByTagName("button")[0];
         buttondom.addEventListener("click", ()=>{
             var serch = document.getElementById("serch").value;
@@ -22,6 +29,14 @@
             console.log(parent.window.window) 
         })
 
+
+
+
+
+
+
+
+        ////////////////////////////////////////////////////////
         function loadScript(url, func) {
         var head = document.getElementsByTagName('head')[0];
         var title = document.getElementsByTagName('title')[0];
