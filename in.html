@@ -15,7 +15,7 @@
         buttondom.addEventListener("click", ()=>{
             var serch = document.getElementById("serch").value;
 
-            parent.window.window.baidu.sug(serch);
+            window.parent.postMessage(serch, '*');
 
             console.log(parent)
             console.log(parent.window) 
