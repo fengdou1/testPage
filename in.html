@@ -8,11 +8,18 @@
 </head>
 <body>
     this is iframe
-    <button>123</button>
+    <input type="text" id="serch">
+    <button>测试按钮</button>
     <script>
         var buttondom = document.getElementsByTagName("button")[0];
         buttondom.addEventListener("click", ()=>{
-            console.log(window.parent)
+            var serch = document.getElementById("serch").value;
+
+            parent.window.window.baidu.sug(serch);
+
+            console.log(parent)
+            console.log(parent.window) 
+            console.log(parent.window.window) 
         })
 
         function loadScript(url, func) {
