@@ -8,7 +8,13 @@
 </head>
 <body>
     this is iframe
+    <button>123</button>
     <script>
+        var buttondom = document.getElementsByTagName("button")[0];
+        buttondom.addEventListener("click", ()=>{
+            console.log(window.parent)
+        })
+
         function loadScript(url, func) {
         var head = document.getElementsByTagName('head')[0];
         var title = document.getElementsByTagName('title')[0];
